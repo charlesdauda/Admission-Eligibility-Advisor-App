@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Eligibility App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <div class="container">
+    <h1>Admission Eligibility Advisor</h1>
+
+    <label for="course-group">Select Course Group:</label>
+    <select id="course-group">
+      <option value="">-- Select --</option>
+      <option value="science">Science</option>
+      <option value="arts">General Arts</option>
+    </select>
+
+    <div id="subjects-container"></div>
+
+    <button id="check-btn">Check Eligibility</button>
+    <div id="dialog-box"></div>
+    <div id="result"></div>
+  </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
