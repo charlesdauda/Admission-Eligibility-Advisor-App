@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #66cbb0, #629cc3, #52ffd4);
+  background-attachment: fixed;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  background: #ffffff;
+  padding: 35px 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 480px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #a400ad;
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: 600;
+  color: #333;
+}
+
+select,
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #f1f5ff;
+  box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.05),
+              inset -2px -2px 6px rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+select:focus,
+input:focus {
+  outline: none;
+  background: #ffffff;
+  box-shadow: 0 0 0 2px #88baff;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background-color: #00adaa;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #007f57;
+}
+
+#result {
+  margin-top: 25px;
+  padding: 15px;
+  background-color: #e9f3ff;
+  border-left: 5px solid #00ad90;
+  border-radius: 10px;
+  color: #00ad99;
+  font-weight: bold;
+  text-align: center;
+  display: none;
+}
+
+#dialog-box {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #0085ad;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  display: none;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateX(-50%) translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 25px 20px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    padding: 20px 15px;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  select,
+  input[type="text"],
+  button {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  #result {
+    font-size: 0.95rem;
+  }
+}
+
